@@ -1,0 +1,11 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=x-de-meta
+pkgdesc='X desktop environment'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(dwm termite dmenu slock dwm-utils xcompmgr)

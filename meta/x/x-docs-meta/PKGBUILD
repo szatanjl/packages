@@ -1,0 +1,11 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=x-docs-meta
+pkgdesc='X document viewers'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(zathura-pdf-mupdf)

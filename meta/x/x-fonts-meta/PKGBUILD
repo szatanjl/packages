@@ -1,0 +1,15 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=x-fonts-meta
+pkgdesc='X fonts'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(
+	ttf-dejavu
+	noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra
+	nerd-fonts-dejavu-complete
+)

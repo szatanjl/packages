@@ -1,0 +1,14 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=x-img-meta
+pkgdesc='X image tools'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(
+	sxiv
+	# TODO image editing (pinta, gimp, krita)
+)
