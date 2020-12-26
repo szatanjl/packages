@@ -1,0 +1,34 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=git-zero
+pkgdesc='Tool to make last git commit start with six zeroes'
+url=https://github.com/szatanjl/git-zero
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+source=("$pkgname::git+$url.git")
+md5sums=(SKIP)
+
+depends=(glibc git openssl)
+makedepends=(make coreutils git gcc)
+
+pkgver()
+{
+	cd -- "$srcdir/$pkgname"
+	printf '%s.%s' "$(TZ=UTC git log -n 1 --format=%cd \
+	                                 --date=format-local:%Y%m%d)" \
+	               "$(git rev-parse --short HEAD)"
+}
+
+build()
+{
+	cd -- "$srcdir/$pkgname"
+	make prefix=/usr
+}
+
+package()
+{
+	cd -- "$srcdir/$pkgname"
+	make DESTDIR="$pkgdir" prefix=/usr install
+}
