@@ -1,0 +1,15 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=kernel-meta
+pkgdesc='Kernel'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(
+	linux linux-lts
+	linux-firmware
+	amd-ucode intel-ucode
+)
