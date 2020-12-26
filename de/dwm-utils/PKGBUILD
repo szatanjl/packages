@@ -1,0 +1,37 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=dwm-utils
+pkgdesc='Scripts for dwm'
+url=https://github.com/szatanjl/dwm-utils
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+source=("$pkgname::git+$url.git")
+md5sums=(SKIP)
+
+depends=(sh coreutils findutils grep sed
+         alsa-utils dmenu feh maim slock xdg-utils xf86-input-synaptics
+         redshift wireless_tools
+         xorg-xbacklight xorg-xrandr xorg-xsetroot)
+makedepends=(make coreutils git)
+
+pkgver()
+{
+	cd -- "$srcdir/$pkgname"
+	printf '%s.%s' "$(TZ=UTC git log -n 1 --format=%cd \
+	                                 --date=format-local:%Y%m%d)" \
+	               "$(git rev-parse --short HEAD)"
+}
+
+build()
+{
+	cd -- "$srcdir/$pkgname"
+	make prefix=/usr libexecdir=/usr/lib
+}
+
+package()
+{
+	cd -- "$srcdir/$pkgname"
+	make DESTDIR="$pkgdir" prefix=/usr libexecdir=/usr/lib install
+}
