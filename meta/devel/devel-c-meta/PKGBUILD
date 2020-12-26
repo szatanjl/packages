@@ -1,0 +1,15 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=devel-c-meta
+pkgdesc='C'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(
+	glibc
+	gcc clang
+	cppcheck
+)
