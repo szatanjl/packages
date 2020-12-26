@@ -1,0 +1,11 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=config-meta
+pkgdesc='System configuration and filesystem hierarchy'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(filesystem iana-etc)
