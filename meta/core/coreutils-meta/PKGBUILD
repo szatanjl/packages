@@ -1,0 +1,12 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=coreutils-meta
+pkgdesc='Core utils'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(coreutils diffutils file findutils grep patch procps-ng psmisc
+         sed util-linux which)
