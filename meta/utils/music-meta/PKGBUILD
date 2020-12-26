@@ -1,0 +1,14 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=music-meta
+pkgdesc='Music tools'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(
+	flac lame
+	cmus
+)

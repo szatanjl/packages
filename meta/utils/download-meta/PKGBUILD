@@ -1,0 +1,15 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=download-meta
+pkgdesc='Download tools'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(
+	curl wget
+	aria2
+	youtube-dl
+)

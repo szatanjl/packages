@@ -1,0 +1,14 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=calc-meta
+pkgdesc='Calculators'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(
+	bc
+	calc
+)

@@ -1,0 +1,11 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=hardware-meta
+pkgdesc='Hardware tools'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(pciutils sysfsutils usbutils)

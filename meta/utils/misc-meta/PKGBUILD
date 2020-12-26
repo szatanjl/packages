@@ -1,0 +1,17 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=misc-meta
+pkgdesc='Miscellaneous tools'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+# TODO xdg-open tool (look at linopen, sx-open)
+depends=(
+	time tree
+	aspell aspell-en aspell-pl
+	cloc
+	httpie
+)

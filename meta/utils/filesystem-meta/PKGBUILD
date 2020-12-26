@@ -1,0 +1,12 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=filesystem-meta
+pkgdesc='Filesystem tools'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(btrfs-progs dosfstools e2fsprogs exfat-utils f2fs-tools
+         jfsutils ntfs-3g reiserfsprogs xfsprogs)

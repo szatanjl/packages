@@ -1,0 +1,14 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=audio-meta
+pkgdesc='Audio tools'
+url=https://github.com/szatanjl/packages
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+
+depends=(
+	alsa-utils alsa-plugins alsa-firmware
+	pulseaudio pulseaudio-alsa pulseaudio-bluetooth pulsemixer
+)
