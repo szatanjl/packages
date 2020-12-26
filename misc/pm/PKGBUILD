@@ -1,0 +1,41 @@
+# Maintainer: szatanjl <szatan@gecc.xyz>
+pkgname=pm
+pkgdesc='Password manager based on argon2 hashing'
+url=https://github.com/szatanjl/pm
+license=(unknown)
+
+pkgver=1
+pkgrel=1
+arch=(any)
+source=("$pkgname::git+$url.git")
+md5sums=(SKIP)
+
+depends=(glibc argon2)
+makedepends=(make coreutils git gcc)
+checkdepends=(make coreutils git gcc)
+
+pkgver()
+{
+	cd -- "$srcdir/$pkgname"
+	printf '%s.%s' "$(TZ=UTC git log -n 1 --format=%cd \
+	                                 --date=format-local:%Y%m%d)" \
+	               "$(git rev-parse --short HEAD)"
+}
+
+build()
+{
+	cd -- "$srcdir/$pkgname"
+	make prefix=/usr
+}
+
+check()
+{
+	cd -- "$srcdir/$pkgname"
+	make prefix=/usr check
+}
+
+package()
+{
+	cd -- "$srcdir/$pkgname"
+	make DESTDIR="$pkgdir" prefix=/usr install
+}
