@@ -11,7 +11,7 @@ source=("$pkgname::git+$url.git")
 md5sums=(SKIP)
 
 depends=(sh coreutils findutils grep sed
-         alsa-utils dmenu feh maim slock xdg-utils xf86-input-synaptics
+         alsa-utils dmenu feh maim slock xdg-utils xf86-input-libinput
          redshift wireless_tools
          xorg-xbacklight xorg-xrandr xorg-xsetroot)
 makedepends=(make coreutils git)
